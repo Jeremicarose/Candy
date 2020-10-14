@@ -23,18 +23,18 @@ public class InfoActivity extends AppCompatActivity {
                 into(candyStoreImageView);
 
     }
+
+    // ***
+    // TODO - Task 2 - Launch the Google Maps Activity
+    // ***
     public void createMapIntent(View view){
+        Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801");
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=618 E South St Orlando, FL 32801"));
         intent.setPackage("com.google.android.apps.maps");
         if(intent.resolveActivity(getPackageManager())!=null) {
             startActivity(intent);
         }
     }
-
-    // ***
-    // TODO - Task 2 - Launch the Google Maps Activity
-    // ***
-
 
     // ***
     // TODO - Task 3 - Launch the Phone Activity
